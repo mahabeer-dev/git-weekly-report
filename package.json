@@ -1,0 +1,21 @@
+{
+  "name": "git-weekly-report",
+  "version": "1.0.0",
+  "description": "Generate weekly work report from git commits across multiple repos",
+  "bin": {
+    "git-weekly-report": "./index.js"
+  },
+  "keywords": [
+    "git",
+    "report",
+    "weekly",
+    "cli",
+    "status",
+    "standup",
+    "productivity",
+    "work-log",
+    "generator",
+    "automation"
+  ],
+  "license": "MIT"
+}
