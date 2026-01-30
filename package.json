@@ -5,6 +5,15 @@
   "bin": {
     "git-weekly-report": "./index.js"
   },
+  "author": "Mahabeer <mahabeer.fcs.gna@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahabeer-dev/git-weekly-report.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahabeer-dev/git-weekly-report/issues"
+  },
+  "homepage": "https://github.com/mahabeer-dev/git-weekly-report#readme",
   "keywords": [
     "git",
     "report",
