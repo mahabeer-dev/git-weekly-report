@@ -1,5 +1,5 @@
 {
-  "name": "git-report",
+  "name": "git-weekly-report",
   "version": "1.0.1",
   "description": "Generate work report from git commits across multiple repos",
   "bin": {

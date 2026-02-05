@@ -1,6 +1,6 @@
 # Git Report
 
-[![npm version](https://img.shields.io/npm/v/git-report.svg)](https://www.npmjs.com/package/git-report)
+[![npm version](https://img.shields.io/npm/v/@mahabeer-dev/git-report.svg)](https://www.npmjs.com/package/@mahabeer-dev/git-report)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Automate your git status reports.**  
