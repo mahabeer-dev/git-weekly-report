@@ -1,6 +1,6 @@
 {
   "name": "git-weekly-report",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Generate work report from git commits across multiple repos",
   "bin": {
     "git-report": "./index.js"

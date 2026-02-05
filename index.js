@@ -19,7 +19,7 @@ function getArg(name, defaultValue) {
 }
 
 const DAYS = parseInt(getArg("days", "7"), 10);
-const OUTPUT_FILE = getArg("out", "weekly-report.md");
+const OUTPUT_FILE = getArg("out", "report.md");
 const BASE_DIR = getArg("dir", path.join(os.homedir(), "Documents/projects"));
 
 // ------------------
@@ -56,10 +56,20 @@ try {
   userEmail = "Unknown";
 }
 
-const fromDate = new Date(Date.now() - DAYS * 24 * 60 * 60 * 1000)
-  .toISOString()
-  .split("T")[0];
 const toDate = new Date().toISOString().split("T")[0];
+
+let sinceParam = "";
+let fromDate = "";
+
+if (DAYS === 1) {
+  sinceParam = `${toDate} 00:00:00`;
+  fromDate = toDate;
+} else {
+  sinceParam = `${DAYS} days ago`;
+  fromDate = new Date(Date.now() - DAYS * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .split("T")[0];
+}
 
 // ------------------
 // Main logic
@@ -69,10 +79,10 @@ console.log("📅 Days:", DAYS);
 console.log("📄 Output:", OUTPUT_FILE);
 console.log("");
 
-let output = `# Git Report\n\n`;
+let output = `# Work Report\n\n`;
 
-output += `**Name:** ${userName}\n\n`;
-output += `**Email:** ${userEmail}\n\n`;
+output += `**Name:** ${userName}\n`;
+output += `**Email:** ${userEmail}\n`;
 output += `**Period:** ${fromDate} → ${toDate}\n\n`;
 output += `---\n\n`;
 
@@ -83,10 +93,11 @@ const repos = fs
   .map((name) => path.join(baseDir, name))
   .filter((p) => fs.existsSync(path.join(p, ".git")));
 
+const dateFromat = DAYS === 1 ? "%H:%M" : "%b %d, %y %H:%M";
 for (const repo of repos) {
   try {
     const commits = run(
-      `git log --since="${DAYS} days ago" --pretty=format:"- %s"`,
+      `git log --since="${sinceParam}" --pretty=format:"- %s (%cd)" --date=format:"${dateFromat}"`,
       repo,
     );
 
