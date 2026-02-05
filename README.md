@@ -1,18 +1,18 @@
-# Git Weekly Report
+# Git Report
 
-[![npm version](https://img.shields.io/npm/v/git-weekly-report.svg)](https://www.npmjs.com/package/git-weekly-report)
+[![npm version](https://img.shields.io/npm/v/git-report.svg)](https://www.npmjs.com/package/git-report)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Automate your weekly status reports.**  
-> `git-weekly-report` is a lightweight CLI tool that scans your local git repositories and generates a markdown summary of your work for the week.
+> **Automate your git status reports.**  
+> `git-report` is a lightweight CLI tool that scans your local git repositories and generates a markdown summary of your work for any time period.
 
-Perfect for developers who need to submit weekly updates, stand-up notes, or work logs.
+Perfect for developers who need to submit daily updates, weekly summaries, or project work logs.
 
 ## 🚀 Features
 
 - **Multi-Repo Scanning**: Automatically finds all git repositories in a specified directory.
 - **Customizable Timeframe**: Generate reports for the last 7 days, 14 days, or any custom duration.
-- **Markdown Output**: Creates a clean, ready-to-share `weekly-report.md` file.
+- **Markdown Output**: Creates a clean, ready-to-share `git-report.md` file.
 - **Privacy Focused**: Runs entirely locally. No data is sent to the cloud.
 - **Zero Config**: Works out of the box using your global `.gitconfig`.
 
@@ -22,12 +22,12 @@ You can run it directly with `npx` or install it globally via `npm`.
 
 ### Using npx (Recommended)
 ```bash
-npx git-weekly-report
+npx git-report
 ```
 
 ### Global Install
 ```bash
-npm install -g git-weekly-report
+npm install -g git-report
 ```
 
 ## 🛠 Usage
@@ -35,7 +35,7 @@ npm install -g git-weekly-report
 Simply run the command in your terminal:
 
 ```bash
-git-weekly-report
+git-report
 ```
 
 By default, this will:
@@ -57,12 +57,12 @@ You can customize the behavior using CLI flags:
 
 **Scan a specific directory for the last 5 days:**
 ```bash
-git-weekly-report --dir ~/my-work-folder --days 5
+git-report --dir ~/my-work-folder --days 5
 ```
 
 **Generate a report for the last month:**
 ```bash
-git-weekly-report --days 30 --out monthly-summary.md
+git-report --days 30 --out monthly-summary.md
 ```
 
 ## 📄 Example Output
@@ -70,7 +70,7 @@ git-weekly-report --days 30 --out monthly-summary.md
 The generated markdown file looks like this:
 
 ```markdown
-# Weekly Report
+# Git Report
 
 **Name:** John Doe
 **Email:** john@example.com

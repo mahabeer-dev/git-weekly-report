@@ -69,7 +69,7 @@ console.log("📅 Days:", DAYS);
 console.log("📄 Output:", OUTPUT_FILE);
 console.log("");
 
-let output = `# Weekly Report\n\n`;
+let output = `# Git Report\n\n`;
 
 output += `**Name:** ${userName}\n\n`;
 output += `**Email:** ${userEmail}\n\n`;

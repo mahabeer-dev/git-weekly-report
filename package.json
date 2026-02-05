@@ -1,9 +1,9 @@
 {
-  "name": "git-weekly-report",
-  "version": "1.0.0",
-  "description": "Generate weekly work report from git commits across multiple repos",
+  "name": "git-report",
+  "version": "1.0.1",
+  "description": "Generate work report from git commits across multiple repos",
   "bin": {
-    "git-weekly-report": "./index.js"
+    "git-report": "./index.js"
   },
   "author": "Mahabeer <mahabeer.fcs.gna@gmail.com>",
   "repository": {
@@ -17,7 +17,9 @@
   "keywords": [
     "git",
     "report",
+    "daily",
     "weekly",
+    "monthly",
     "cli",
     "status",
     "standup",
